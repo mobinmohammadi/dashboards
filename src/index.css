@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import url("./Style/reset.css");
+@font-face {
+  font-family: vazir;
+  src: url("./../public/font/vazir-font-v16.1.0/Vazir-Medium.woff");
+}
+
+body {
+  font-family: "vazir";
+}
+
+
+@theme {
+  --color-primary-100 : #2B5AE5;
+  --color-primary-200 : #F0F5FE;
+  --color-primary-300 : #96BFFA;
+}
+
+.container-custom{
+  /* padding: 0 24px 0 24px; */
+  width: 90%;
+  margin: 0 auto;
+}
