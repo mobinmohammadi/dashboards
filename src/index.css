@@ -9,15 +9,33 @@ body {
   font-family: "vazir";
 }
 
-
 @theme {
-  --color-primary-100 : #2B5AE5;
-  --color-primary-200 : #F0F5FE;
-  --color-primary-300 : #96BFFA;
+  --color-primary-100: #2b5ae5;
+  --color-primary-200: #f0f5fe;
+  --color-primary-300: #96bffa;
+
+  --text-md: 15px;
+  --breakpoint-x: 400px;
+  --breakpoint-xs: 468px;
+  --breakpoint-md: 548px;
+  --breakpoint-mmd: 768px;
+  --breakpoint-s: 200px;
+  --text-x: 10px;
+  --text-xs: 12px;
+  --text-xxs: 14px;
+  --text-md: 15px;
 }
 
-.container-custom{
+.container-custom {
   /* padding: 0 24px 0 24px; */
-  width: 90%;
+  width: 96%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1250px) {
+  .container-custom {
+    /* padding: 0 24px 0 24px; */
+    width: 1260px;
+    margin: 0 auto;
+  }
 }

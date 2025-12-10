@@ -4,7 +4,7 @@ import Sidebar from "./layout/Sidebar/Sidebar";
 
 function Layout() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen container-custom">
       <div className="w-[320px]">
         <Sidebar />
       </div>
