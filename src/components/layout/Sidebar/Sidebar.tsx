@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 const li = [
-  { id: "1", svg: "#menu-svg", title: "داشبورد اصلی" },
-  { id: "2", svg: "#users", title: "لیست بیماران" },
-  { id: "3", svg: "#time-svg", title: "تقویم نوبت‌ها " },
+  { id: "1", svg: "#menu-svg", title: "داشبورد اصلی" , link : "/" },
+  { id: "2", svg: "#users", title: "لیست بیماران" , link : 'patient' },
+  { id: "3", svg: "#time-svg", title: "تقویم نوبت‌ها " , link : "/"},
 ];
 
 function Sidebar() {
@@ -27,7 +28,7 @@ function Sidebar() {
         <nav>
           <ul className="& > *:flex  & > *:text-sm & > *:pt-3 & > *:pb-3 & > *:pr-10 & > *:pl-10 & > *:cursor-pointer & > *:gap-4  gap-6 flex flex-col & > *:items-center">
             {li.map((item) => (
-              <li
+              <Link to={item.link}
                 className={` ${activeTitle === item.id
                     ? "bg-primary-200 border-r-3 border-r-primary-300 rounded-r-xl text-gray-700 transition-[0.1s]"
                     : "text-gray-500 bg-neutral-50"
@@ -41,7 +42,7 @@ function Sidebar() {
                   <use href={item.svg}></use>
                 </svg>
                 {item.title}
-              </li>
+              </Link>
             ))}
           </ul>
         </nav>
