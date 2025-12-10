@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import ItemDetails from "./ItemDetails/ItemDetails";
+import ChartCount from "./ChartCount/ChartCount";
+import PersianDarkCalendar from "./Time/Time";
+import Time from "./Time/Time";
 
 export default function Home() {
   const dataHeader = [
@@ -9,45 +12,48 @@ export default function Home() {
     { id: 4, title: "کل درآمد", count: "۲۳,۰۰۰,۰۰۰", persent: "۵٪" },
   ];
 
-  const users = [
-    { id: 1, name: "بهنام محمدی", why: "سر درد", status: 1 },
-    { id: 2, name: "آروین علیالی", why: "شکم درد", status: 0 },
-    { id: 3, name: "رسول خزیری", why: "پا درد", status: 0 },
-    { id: 4, name: "محمدی حریری", why: "دست درد", status: 1 },
-    { id: 5, name: "احسان حاجی", why: "میگرن", status: 0 },
+  const patients = [
+    { id: 1, name: "بهنام محمدی", why: "سر درد", status: 1, age: 28, gender: "مرد", time: "10:30", appointment: "حضوری" },
+    { id: 2, name: "آروین علیالی", why: "شکم درد", status: 0, age: 35, gender: "مرد", time: "11:00", appointment: "آنلاین" },
+    { id: 3, name: "رسول خزیری", why: "پا درد", status: 0, age: 42, gender: "مرد", time: "12:15", appointment: "حضوری" },
+    { id: 4, name: "محمدی حریری", why: "دست درد", status: 1, age: 30, gender: "زن", time: "09:45", appointment: "آنلاین" },
+    { id: 5, name: "احسان حاجی", why: "میگرن", status: 0, age: 25, gender: "مرد", time: "13:00", appointment: "حضوری" },
   ];
+
 
   const [startIndex, setStartIndex] = useState(0);
 
   // حرکت حلقه‌ای جدول بیماران
   useEffect(() => {
     const interval = setInterval(() => {
-      setStartIndex((prev) => (prev + 1) % users.length);
+      setStartIndex((prev) => (prev + 1) % patients.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   const reordered = [
-    ...users.slice(startIndex),
-    ...users.slice(0, startIndex),
+    ...patients.slice(startIndex),
+    ...patients.slice(0, startIndex),
   ];
 
   return (
-    <div className="w-full">
-      <div className="grid grid-cols-3 gap-4">
+    <div className="w-full flex flex-col gap-4">
+      <div className="grid grid-cols-4 gap-4">
 
         {/* کارت‌های بالا */}
         {dataHeader.map((item, index) => (
           <div
             key={item.id}
-            className={index === dataHeader.length - 1 ? "col-span-2" : ""}
+
           >
             <ItemDetails {...item} />
           </div>
         ))}
 
         {/* جدول */}
-        <div className="w-full col-span-2 border border-gray-300 rounded-2xl p-6">
+      </div>
+      <div className="w-full flex gap-4 h-[316px] ">
+        <div className="w-[648px] h-full border border-gray-300 rounded-2xl p-6">
           <div className="flex flex-col gap-5 w-full">
 
             {/* هدر جدول */}
@@ -65,9 +71,13 @@ export default function Home() {
             <table className="w-full text-right border-collapse">
               <thead>
                 <tr className="border-b border-gray-300">
-                  <th className="px-4 py-2">نام</th>
-                  <th className="px-4 py-2">دلیل</th>
-                  <th className="px-4 py-2">وضعیت</th>
+                  <th className="px-4 py-2 text-xs">نام</th>
+                  <th className="px-4 py-2 text-xs">سن</th>
+                  <th className="px-4 py-2 text-xs">جنسیت</th>
+                  <th className="px-4 py-2 text-xs">دلیل</th>
+                  <th className="px-4 py-2 text-xs">زمان</th>
+                  <th className="px-4 py-2 text-xs">نوع نوبت</th>
+                  <th className="px-4 py-2 text-xs">وضعیت</th>
                 </tr>
               </thead>
 
@@ -76,17 +86,17 @@ export default function Home() {
                   <tr
                     key={item.id}
                     className={`
-                      border-b border-gray-200 transition-all duration-700
-                      ${index === reordered.length - 1 
-                        ? "opacity-0 -translate-y-2"
-                        : "opacity-100 translate-y-0"}
-                    `}
+          border-b border-gray-200 transition-all duration-700
+          ${index === reordered.length - 1 ? "opacity-0 -translate-y-2" : "opacity-100 translate-y-0"}
+        `}
                   >
-                    <td className="px-4 py-2">{item.name}</td>
-                    <td className="px-4 py-2">{item.why}</td>
-                    <td className="px-4 py-2">
-                      {item.status === 1 ? "ویزیت" : "عدم ویزیت"}
-                    </td>
+                    <td className="px-4 py-2 text-xxs">{item.name}</td>
+                    <td className="px-4 py-2 text-xxs">{item.age}</td>
+                    <td className="px-4 py-2 text-xxs">{item.gender}</td>
+                    <td className="px-4 py-2 text-xxs">{item.why}</td>
+                    <td className="px-4 py-2 text-xxs">{item.time}</td>
+                    <td className="px-4 py-2 text-xxs">{item.appointment}</td>
+                    <td className="px-4 py-2 text-xxs">{item.status === 1 ? "ویزیت" : "عدم ویزیت"}</td>
                   </tr>
                 ))}
               </tbody>
@@ -94,8 +104,9 @@ export default function Home() {
 
           </div>
         </div>
-
+        <ChartCount />
       </div>
+      <Time />
     </div>
   );
 }

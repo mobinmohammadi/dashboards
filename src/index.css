@@ -32,10 +32,10 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1300px) {
   .container-custom {
     /* padding: 0 24px 0 24px; */
-    width: 1260px;
+    width: 1350px;
     margin: 0 auto;
   }
 }

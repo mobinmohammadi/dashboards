@@ -1,18 +1,18 @@
 import { useState } from "react";
 
 const li = [
-  { svg: "#menu-svg", title: "داشبورد اصلی" },
-  { svg: "#users", title: "لیست بیماران" },
-  { svg: "#time-svg", title: "تقویم نوبت‌ها " },
+  { id: "1", svg: "#menu-svg", title: "داشبورد اصلی" },
+  { id: "2", svg: "#users", title: "لیست بیماران" },
+  { id: "3", svg: "#time-svg", title: "تقویم نوبت‌ها " },
 ];
 
 function Sidebar() {
   const [title, setTitle] = useState("");
 
-  const [activeTitle , setActiveTitle ] = useState("");
+  const [activeTitle, setActiveTitle] = useState("1");
 
-  const handelrAcvtive = (title: string) => {
-   setActiveTitle(title)
+  const handelrAcvtive = (id: string) => {
+    setActiveTitle(id)
   };
 
   return (
@@ -28,14 +28,13 @@ function Sidebar() {
           <ul className="& > *:flex  & > *:text-sm & > *:pt-3 & > *:pb-3 & > *:pr-10 & > *:pl-10 & > *:cursor-pointer & > *:gap-4  gap-6 flex flex-col & > *:items-center">
             {li.map((item) => (
               <li
-                className={` ${
-                  activeTitle === item.title
+                className={` ${activeTitle === item.id
                     ? "bg-primary-200 border-r-3 border-r-primary-300 rounded-r-xl text-gray-700 transition-[0.1s]"
                     : "text-gray-500 bg-neutral-50"
-                }`}
+                  }`}
                 onClick={() => {
-                  handelrAcvtive(item.title);
-                  setTitle(item.title);
+                  handelrAcvtive(item.id);
+                  setTitle(item.id);
                 }}
               >
                 <svg className="w-5 h-5 text-black">
