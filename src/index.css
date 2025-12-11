@@ -33,9 +33,17 @@ body {
 }
 
 @media screen and (min-width: 1300px) {
-  .container-custom {
-    /* padding: 0 24px 0 24px; */
+  */ .container-custom {
     width: 1350px;
     margin: 0 auto;
   }
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }

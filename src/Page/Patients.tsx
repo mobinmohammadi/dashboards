@@ -1,7 +1,7 @@
 import React from 'react'
-import Patient from '../components/Patients/Patient'
+import Patient from '../features/Patients/Patient'
 export default function Patients() {
   return (
-    <div><Patient/></div>
+    <div className='p-4'><Patient/></div>
   )
 }

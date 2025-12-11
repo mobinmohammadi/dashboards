@@ -6,7 +6,7 @@ export default function Header() {
       <div className="flex w-full pb-3 items-center justify-between mt-4 text-gray-700">
         <span>داشبورد اصلی</span>
         <div className="flex items-center gap-4">
-          <div className="flex bg-[#F7F7F7] h-8 pr-4 pl-4 rounded-2xl">
+          <div className=" bg-[#F7F7F7] sm:flex hidden h-8 pr-4 pl-4 rounded-2xl">
             <input
               type="text"
               className="outline-0 text-[10px]"
@@ -16,10 +16,13 @@ export default function Header() {
               <use href="#search"></use>
             </svg>
           </div>
+          <svg className="w-5 h-5 ">
+            <use href="#search"></use>
+          </svg>
           <svg className="w-5 h-5">
             <use href="#bales"></use>
           </svg>
-          
+
           <svg className="w-5 h-5">
             <use href="#user-account"></use>
           </svg>
