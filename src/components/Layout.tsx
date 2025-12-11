@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import Header from "./layout/Header/Header";
 import Sidebar from "./layout/Sidebar/Sidebar";
+import Menumobile from "./Menumobile/Menumobile";
 
 function Layout() {
   return (
@@ -14,6 +15,7 @@ function Layout() {
           <Outlet />
         </main>
       </div>
+      <Menumobile/>
     </div>
   );
 }

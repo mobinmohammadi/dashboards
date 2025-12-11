@@ -34,7 +34,7 @@ const DataBoxPatint = [
 
 export default function Patient() {
   return (
-    <div className="flex flex-col gap-5 pb-20">
+    <div className="flex flex-col gap-5 pb-28">
       <HeaderPatient />
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         {DataBoxPatint.map((item) => (
