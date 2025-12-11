@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function HeaderPatient() {
   return (
     <div className="h-[204px]  sm:h-[155px] text-xs text-gray-700 flex-col sm:flex-row flex justify-between pl-4 items-center  text-right border border-gray-400 rounded-2xl">
@@ -34,7 +32,9 @@ export default function HeaderPatient() {
               <use href="#plass"></use>
             </svg>
           </div>
-          <span className="sm:text-primary-100 text-x text-gray-700 border-b-gray-700 border-b">نمایش اطلاعات بیشتر</span>
+          <span className="sm:text-primary-100 text-x text-gray-700 border-b-gray-700 border-b">
+            نمایش اطلاعات بیشتر
+          </span>
         </div>
         <svg className="w-6 h-6">
           <use href="#menu"></use>

@@ -1,4 +1,3 @@
-import React from "react";
 import BoxRecordsTest from "./BoxRecordsTest";
 
 export default function TestRecords() {

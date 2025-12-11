@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface IBox {
     title: string,
     img: string,

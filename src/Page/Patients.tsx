@@ -1,4 +1,3 @@
-import React from 'react'
 import Patient from '../features/Patients/Patient'
 export default function Patients() {
   return (
