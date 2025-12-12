@@ -1,8 +1,8 @@
-export default function Header() {
+export default function Header({title } : string) {
   return (
     <div className=" h-14 pr-4 pl-4 border-b-gray-400 border-b  w-full">
       <div className="flex w-full pb-3 items-center justify-between mt-4 text-gray-700">
-        <span>داشبورد اصلی</span>
+        <span>{title}</span>
         <div className="flex items-center gap-4">
           <div className=" bg-[#F7F7F7] sm:flex hidden h-8 pr-4 pl-4 rounded-2xl">
             <input

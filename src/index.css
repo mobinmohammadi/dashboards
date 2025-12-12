@@ -47,3 +47,7 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+.tranasition-custom{
+  transition: all 5s ease;
+}
