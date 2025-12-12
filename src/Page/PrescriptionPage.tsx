@@ -1,4 +1,3 @@
-import React from 'react'
 import PatientsPrescription from '../features/PatientsPrescription/PatientsPrescription'
 
 export default function PrescriptionPage() {

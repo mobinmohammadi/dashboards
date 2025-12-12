@@ -46,7 +46,9 @@ export default function Patient() {
         <TestRecords />
       </div>
       <PrescriptionMedicine />
-      <Button/>
+      
+      <Button />
+      
     </div>
   );
 }

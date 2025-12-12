@@ -1,6 +1,8 @@
-import React from 'react'
+interface IProps {
+    setIsShowModal : (value : boolean) => void
+}
 
-export default function HeaderPatientsPrescription() {
+export default function HeaderPatientsPrescription({setIsShowModal} : IProps) {
   return (
 <div className=" flex justify-between items-center">
       <div className="flex items-center gap-4">
@@ -14,7 +16,7 @@ export default function HeaderPatientsPrescription() {
           <span className="text-xxs text-gray-800">فاطمه طیبی</span>
         </div>
       </div>
-      <div className="">
+      <div onClick={() => setIsShowModal(true)} className="">
         <div className="flex flex-col items-center justify-center gap-4 cursor-pointer">
           <div className="bg-[#4179F0] items-center text-white pt-3 pb-3 pr-5 pl-5 rounded-xl flex gap-1">
             <span className="text-xs w-16">ثبت نسخه</span>
