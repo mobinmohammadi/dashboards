@@ -1,4 +1,3 @@
-
 export default function TableTest() {
   return (
     <div>
@@ -9,8 +8,16 @@ export default function TableTest() {
               <th className="px-4 py-3 border-b">ردیف</th>
               <th className="px-4 py-3 border-b">نام دارو</th>
               <th className="px-4 py-3 border-b">تعداد</th>
-              <th className="px-4 py-3 border-b">دوز مصرفی</th>
-              <th className="px-4 py-3 border-b">توضیحات</th>
+              <th
+                className="px-4 py-3 border-b hidden sm:table-cell"
+              >
+                دوز مصرفی
+              </th>
+              <th
+                className="px-4 py-3 border-b hidden sm:table-cell"
+              >
+                توضیحات
+              </th>
             </tr>
           </thead>
 
@@ -19,20 +26,32 @@ export default function TableTest() {
               <td className="px-4 py-3 border-b text-center">1</td>
               <td className="px-4 py-3 border-b">استامینوفن</td>
               <td className="px-4 py-3 border-b text-center">20 عدد</td>
-              <td className="px-4 py-3 border-b text-center">
+              <td
+                className="px-4 py-3 border-b text-center hidden sm:table-cell "
+              >
                 هر 8 ساعت 1 عدد
               </td>
-              <td className="px-4 py-3 border-b">مصرف بعد از غذا</td>
+              <td
+                className="px-4 py-3 border-b  hidden sm:table-cell"
+              >
+                مصرف بعد از غذا
+              </td>
             </tr>
 
             <tr className="hover:bg-gray-50 transition & > *:text-gray-800 & > *:text-x">
               <td className="px-4 py-3 border-b text-center">2</td>
               <td className="px-4 py-3 border-b">ایبوپروفن</td>
-              <td className="px-4 py-3 border-b text-center">15 عدد</td>
-              <td className="px-4 py-3 border-b text-center">
+              <td className="px-4 py-3 border-b text-center ">15 عدد</td>
+              <td
+                className="px-4 py-3 border-b text-center hidden sm:table-cell "
+              >
                 هر 12 ساعت 1 عدد
               </td>
-              <td className="px-4 py-3 border-b">در صورت درد مصرف شود</td>
+              <td
+                className="px-4 py-3 border-b hidden sm:table-cell"
+              >
+                در صورت درد مصرف شود
+              </td>
             </tr>
           </tbody>
         </table>

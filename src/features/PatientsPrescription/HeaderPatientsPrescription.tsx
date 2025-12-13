@@ -1,11 +1,11 @@
 interface IProps {
-    setIsShowModal : (value : boolean) => void
+  setIsShowModal: (value: boolean) => void;
 }
 
-export default function HeaderPatientsPrescription({setIsShowModal} : IProps) {
+export default function HeaderPatientsPrescription({ setIsShowModal }: IProps) {
   return (
-<div className=" flex justify-between items-center">
-      <div className="flex items-center gap-4">
+    <div className=" flex justify-between items-center">
+      <div className="flex items-center gap-4 justify-between sm:justify-start w-full">
         <svg className="w-6 h-6">
           <use href="#arrow-right"></use>
         </svg>
@@ -16,15 +16,16 @@ export default function HeaderPatientsPrescription({setIsShowModal} : IProps) {
           <span className="text-xxs text-gray-800">فاطمه طیبی</span>
         </div>
       </div>
-      <div onClick={() => setIsShowModal(true)} className="">
+      <div onClick={() => setIsShowModal(true)} className="hidden sm:flex">
         <div className="flex flex-col items-center justify-center gap-4 cursor-pointer">
           <div className="bg-[#4179F0] items-center text-white pt-3 pb-3 pr-5 pl-5 rounded-xl flex gap-1">
-            <span className="text-xs w-16">ثبت نسخه</span>
+            <button className="text-xs w-16">ثبت نسخه</button>
             <svg className="w-5 h-5">
               <use href="#tick"></use>
             </svg>
           </div>
         </div>
       </div>
-    </div>  )
+    </div>
+  );
 }

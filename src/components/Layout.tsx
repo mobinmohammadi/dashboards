@@ -16,6 +16,9 @@ function Layout() {
       case "/patient":
         setTitle("اطلاعات بیمار");
         break;
+        case "/listofpatients":
+        setTitle("لیست بیماران روز");
+        break;
     }
   }, [location.pathname]);
 
@@ -27,7 +30,7 @@ function Layout() {
         </div>
         <div className="flex flex-col w-full ">
           <Header title={title} />
-          <main className="pr-3 pt-6">
+          <main className="sm:pr-3 pt-6">
             <Outlet />
           </main>
         </div>

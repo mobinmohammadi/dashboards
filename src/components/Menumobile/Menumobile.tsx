@@ -11,7 +11,7 @@ export default function Menumobile() {
         </Link>
 
         <Link
-          to="/patient"
+          to="/listofpatients"
           className="bg-primary-100 flex gap-1 items-center rounded-2xl p-2 text-white"
         >
           <svg className="w-6 h-6">

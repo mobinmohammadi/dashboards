@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const li = [
   { id: "1", svg: "#menu-svg", title: "داشبورد اصلی", link: "/" },
-  { id: "2", svg: "#users", title: "لیست بیماران", link: "patient" },
+  { id: "2", svg: "#users", title: "لیست بیماران", link: "listofpatients" },
   { id: "3", svg: "#time", title: "تقویم نوبت‌ها ", link: "/" },
 ];
 
