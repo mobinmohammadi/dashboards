@@ -23,7 +23,6 @@ export default function Home() {
 
   const [startIndex, setStartIndex] = useState(0);
 
-  // حرکت حلقه‌ای جدول بیماران
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 1) % patients.length);
@@ -38,9 +37,8 @@ export default function Home() {
 
   return (
     <div className="w-full flex flex-col gap-4">
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-4">
 
-        {/* کارت‌های بالا */}
         {dataHeader.map((item, index) => (
           <div
             key={item.id}
@@ -50,13 +48,11 @@ export default function Home() {
           </div>
         ))}
 
-        {/* جدول */}
       </div>
       <div className="w-full flex gap-4 h-[316px] ">
         <div className="w-[648px] h-full border border-gray-300 rounded-2xl p-6">
           <div className="flex flex-col gap-5 w-full">
 
-            {/* هدر جدول */}
             <div className="w-full pb-5 flex border-b-2 border-b-gray-300 items-center justify-between">
               <span className="text-neutral-700 font-medium">بیماران امروز</span>
               <div className="flex flex-col gap-1 text-xs">
@@ -67,7 +63,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* جدول */}
             <table className="w-full text-right border-collapse">
               <thead>
                 <tr className="border-b border-gray-300">
