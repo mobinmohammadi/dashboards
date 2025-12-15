@@ -1,4 +1,9 @@
-export default function Header({title } : string) {
+
+interface Props {
+  title : string
+}
+
+export default function Header({title} : Props) {
   return (
     <div className=" h-14 pr-4 pl-4 border-b-gray-400 border-b  w-full">
       <div className="flex w-full pb-3 items-center justify-between mt-4 text-gray-700">

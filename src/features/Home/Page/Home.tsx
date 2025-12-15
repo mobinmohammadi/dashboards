@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemDetails from "../Components/ItemDetails/ItemDetails";
 import ChartCount from "../Components/ChartCount/ChartCount";
-import Time from "../Components/Time/Time";
 
 export default function Home() {
   const dataHeader = [
@@ -38,7 +37,7 @@ export default function Home() {
     <div className="w-full flex flex-col gap-4 ">
       <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-4">
 
-        {dataHeader.map((item, index) => (
+        {dataHeader.map((item) => (
           <div
             key={item.id}
 

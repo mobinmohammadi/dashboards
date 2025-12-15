@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router";
 
 // ساخت آرایه 40 نفره با داده نمونه

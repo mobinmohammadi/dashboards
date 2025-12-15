@@ -8,7 +8,6 @@ const li = [
 ];
 
 function Sidebar() {
-  const [title, setTitle] = useState("");
   const [toggle, setToggle] = useState(false);
 
   const [activeTitle, setActiveTitle] = useState("1");
@@ -42,7 +41,6 @@ function Sidebar() {
                 }`}
                 onClick={() => {
                   handelrAcvtive(item.id);
-                  setTitle(item.id);
                 }}
               >
                 <svg className="w-5 h-5 text-black">

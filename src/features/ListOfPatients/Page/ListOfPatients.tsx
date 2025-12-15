@@ -1,4 +1,3 @@
-import React from "react";
 import HeaderListOfPatients from "../Components/HeaderListOfPatients/HeaderListOfPatients";
 import PatientsTable from "../Components/TableListOfPatients/TableListOfPatients";
 
