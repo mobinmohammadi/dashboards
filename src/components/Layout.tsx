@@ -24,7 +24,7 @@ function Layout() {
 
   return (
     <div className="">
-      <div className="flex container-custom pb-40">
+      <div className="flex container-custom pb-80">
         <div className=" hidden sm:flex transition-custom h-screen">
           <Sidebar />
         </div>
