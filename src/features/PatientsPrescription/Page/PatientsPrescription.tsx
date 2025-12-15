@@ -1,8 +1,8 @@
 import { useState } from "react";
-import ConfirmModal from "../ConfirmModal/ConfirmModal";
-import HeaderPatientsPrescription from "./HeaderPatientsPrescription";
-import Medicines from "./TablePatientsPrescription/Medicines";
-import TestPatients from "./TestPatients/TestPatients";
+import ConfirmModal from "../../ConfirmModal/ConfirmModal";
+import HeaderPatientsPrescription from "../Components/HeaderPatientsPrescription";
+import Medicines from "../Components/TablePatientsPrescription/Medicines";
+import TestPatients from "../Components/TestPatients/TestPatients";
 
 export default function PatientsPrescription() {
   const [isShowModal, setIsShowModal] = useState(false);

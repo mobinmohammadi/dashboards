@@ -1,5 +1,4 @@
-import React from "react";
-import OnsPateintsEdit from "../features/ListOfPatients/OnsPateintsEdit/OnsPateintsEdit";
+import OnsPateintsEdit from "../features/ListOfPatients/Components/OnsPateintsEdit/OnsPateintsEdit";
 
 export default function OnsPateintsEditPage() {
   return (

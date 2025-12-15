@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Layout from "./components/Layout";
-import Home from "./components/Home/Home";
+import Home from "./features/Home/Page/Home";
 import Patients from "./Page/Patients";
-import ListOfPatients from "./features/ListOfPatients/ListOfPatients";
-import OnsPateintsEdit from "./features/ListOfPatients/OnsPateintsEdit/OnsPateintsEdit";
+import ListOfPatients from "./features/ListOfPatients/Page/ListOfPatients";
+import OnsPateintsEdit from "./features/ListOfPatients/Components/OnsPateintsEdit/OnsPateintsEdit";
 
 function App() {
   return (

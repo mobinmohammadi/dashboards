@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Input from "../../../utils/Input";
-import Button from "../../../utils/Button";
-import SelectOption from "../../../utils/SelectOption";
+import Input from "../../../../utils/Input";
+import Button from "../../../../utils/Button";
+import SelectOption from "../../../../utils/SelectOption";
 
 export default function OnsPateintsEdit() {
   const [form, setForm] = useState<{ [key: string]: string }>({

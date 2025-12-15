@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import ItemDetails from "./ItemDetails/ItemDetails";
-import ChartCount from "./ChartCount/ChartCount";
-import PersianDarkCalendar from "./Time/Time";
-import Time from "./Time/Time";
+import ItemDetails from "../Components/ItemDetails/ItemDetails";
+import ChartCount from "../Components/ChartCount/ChartCount";
+import Time from "../Components/Time/Time";
 
 export default function Home() {
   const dataHeader = [
@@ -36,7 +35,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-4 ">
       <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-4 gap-4">
 
         {dataHeader.map((item, index) => (
@@ -49,8 +48,8 @@ export default function Home() {
         ))}
 
       </div>
-      <div className="w-full flex gap-4 h-[316px] ">
-        <div className="w-[648px] h-full border border-gray-300 rounded-2xl p-6">
+      <div className="w-full flex flex-col gap-4 h-[316px] ">
+        <div className="sm:w-[648px] h-full border border-gray-300 rounded-2xl p-6">
           <div className="flex flex-col gap-5 w-full">
 
             <div className="w-full pb-5 flex border-b-2 border-b-gray-300 items-center justify-between">
@@ -68,9 +67,9 @@ export default function Home() {
                 <tr className="border-b border-gray-300">
                   <th className="px-4 py-2 text-xs">نام</th>
                   <th className="px-4 py-2 text-xs">سن</th>
-                  <th className="px-4 py-2 text-xs">جنسیت</th>
-                  <th className="px-4 py-2 text-xs">دلیل</th>
-                  <th className="px-4 py-2 text-xs">زمان</th>
+                  <th className="px-4 py-2 text-xs hidden sm:table-cell">جنسیت</th>
+                  <th className="px-4 py-2 text-xs hidden sm:table-cell">دلیل</th>
+                  <th className="px-4 py-2 text-xs hidden sm:table-cell">زمان</th>
                   <th className="px-4 py-2 text-xs">نوع نوبت</th>
                   <th className="px-4 py-2 text-xs">وضعیت</th>
                 </tr>
@@ -87,9 +86,9 @@ export default function Home() {
                   >
                     <td className="px-4 py-2 text-xxs">{item.name}</td>
                     <td className="px-4 py-2 text-xxs">{item.age}</td>
-                    <td className="px-4 py-2 text-xxs">{item.gender}</td>
-                    <td className="px-4 py-2 text-xxs">{item.why}</td>
-                    <td className="px-4 py-2 text-xxs">{item.time}</td>
+                    <td className="px-4 py-2 text-xxs hidden sm:table-cell">{item.gender}</td>
+                    <td className="px-4 py-2 text-xxs hidden sm:table-cell">{item.why}</td>
+                    <td className="px-4 py-2 text-xxs hidden sm:table-cell">{item.time}</td>
                     <td className="px-4 py-2 text-xxs">{item.appointment}</td>
                     <td className="px-4 py-2 text-xxs">{item.status === 1 ? "ویزیت" : "عدم ویزیت"}</td>
                   </tr>
@@ -101,7 +100,7 @@ export default function Home() {
         </div>
         <ChartCount />
       </div>
-      <Time />
+      {/* <Time /> */}
     </div>
   );
 }

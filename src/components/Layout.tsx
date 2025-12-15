@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router";
-import Header from "./layout/Header/Header";
-import Sidebar from "./layout/Sidebar/Sidebar";
-import Menumobile from "./Menumobile/Menumobile";
+import Header from "../features/layout/Header/Header";
+import Sidebar from "../features/layout/Sidebar/Sidebar";
+import Menumobile from "../features/Menumobile/Menumobile";
 import { useEffect, useState } from "react";
 
 function Layout() {
@@ -24,13 +24,13 @@ function Layout() {
 
   return (
     <div className="">
-      <div className="flex min-h-screen container-custom">
-        <div className=" hidden sm:flex transition-custom">
+      <div className="flex container-custom pb-40">
+        <div className=" hidden sm:flex transition-custom h-screen">
           <Sidebar />
         </div>
         <div className="flex flex-col w-full ">
           <Header title={title} />
-          <main className="sm:pr-3 pt-6">
+          <main className="sm:pr-3 pt-6 mb-40">
             <Outlet />
           </main>
         </div>

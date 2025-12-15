@@ -1,9 +1,9 @@
-import BoxPatient from "./BoxPatient";
-import Button from "./Button/Button";
-import DetailsDoctor from "./DetailsDoctor";
-import HeaderPatient from "./HeaderPatient";
-import PrescriptionMedicine from "./TestRecords/PrescriptionMedicine/PrescriptionMedicine";
-import TestRecords from "./TestRecords/TestRecords";
+import BoxPatient from "../Components/BoxPatient";
+import Button from "../Components/Button/Button";
+import DetailsDoctor from "../Components/DetailsDoctor";
+import HeaderPatient from "../Components/HeaderPatient";
+import PrescriptionMedicine from "../Components/TestRecords/PrescriptionMedicine/PrescriptionMedicine";
+import TestRecords from "../Components/TestRecords/TestRecords";
 
 const DataBoxPatint = [
   {
@@ -46,9 +46,8 @@ export default function Patient() {
         <TestRecords />
       </div>
       <PrescriptionMedicine />
-      
+
       <Button />
-      
     </div>
   );
 }
