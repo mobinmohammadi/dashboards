@@ -1,4 +1,3 @@
-
 interface ButtonProps {
   text: string;
 }
@@ -11,9 +10,13 @@ export default function Button({ text }: ButtonProps) {
      hover:text-white transition-all cursor-pointer justify-center gap-1 outline-1 rounded-[5px] text-primary-100"
     >
       <button className="cursor-pointer text-xxs ">{text}</button>
-      <svg className="w-4 h-4">
-        <use href="#plus"></use>
-      </svg>
+      {text == "در حال ثبت اطلاعات..." ? (
+        ""
+      ) : (
+        <svg className="w-4 h-4">
+          <use href="#plus"></use>
+        </svg>
+      )}
     </div>
   );
 }

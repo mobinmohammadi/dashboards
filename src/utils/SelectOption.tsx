@@ -6,7 +6,7 @@ interface ISelectOption {
 
 export default function SelectOption({ name, options }: ISelectOption) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 p-5">
       <span>{name}</span>
       <select
         name=""
