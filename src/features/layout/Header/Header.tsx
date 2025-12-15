@@ -12,7 +12,7 @@ export default function Header({title} : Props) {
           <div className=" bg-[#F7F7F7] sm:flex hidden h-8 pr-4 pl-4 rounded-2xl">
             <input
               type="text"
-              className="outline-0 text-[10px]"
+              className="outline-0 text-xs"
               placeholder="جستوجو"
             />
             <svg className="w-5 ">

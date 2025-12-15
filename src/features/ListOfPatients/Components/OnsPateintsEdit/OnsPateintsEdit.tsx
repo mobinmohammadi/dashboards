@@ -21,7 +21,7 @@ export default function OnsPateintsEdit() {
   ]
   return (
     <div className="container-custom mb-[200px] border rounded-2xl border-gray-300">
-      <div className=" items-center  grid grid-cols-3 ">
+      <div className=" items-center grid-cols-1 md:grid-cols-2 sm:grid-cols-3 ">
         <Input
           name="firstname"
           value={form.firstname}
