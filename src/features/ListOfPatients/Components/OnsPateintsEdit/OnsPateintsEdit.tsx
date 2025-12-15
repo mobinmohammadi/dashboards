@@ -18,7 +18,6 @@ export default function OnsPateintsEdit() {
 
   const options = ["مذکر", "مونث"];
   const navigate = useNavigate();
-  const [isShowLoader, setIsShowLaoder] = useState(false);
   const [titleButton , setTitleButton] = useState("ثبت اطلاعات")
   const submitHandler = () => {
     setTitleButton("در حال ثبت اطلاعات...")
