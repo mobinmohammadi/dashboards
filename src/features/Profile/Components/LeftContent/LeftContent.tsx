@@ -29,7 +29,7 @@ export default function LeftContent() {
       <CssBaseline />
       <Box className="flex  flex-col gap-10" component={"form"} onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={2}>
-          <Grid size={6}>
+          <Grid size={12} sm:size={6}>
             <TextField
               id="firstname"
               label="نام"
@@ -60,7 +60,7 @@ export default function LeftContent() {
 
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={12} sm:size={6}>
             <TextField
               id="lastname"
               label="نام خانوادگی"
@@ -88,7 +88,7 @@ export default function LeftContent() {
               }}
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={12} sm:size={6}>
             <TextField
               id="nationalcod"
               label="کد ملی"
@@ -116,7 +116,7 @@ export default function LeftContent() {
               }}
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={12} sm:size={6}>
             <TextField
               id="yearofbirth"
               label="سال تولد"
@@ -144,7 +144,7 @@ export default function LeftContent() {
               }}
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={12} sm:size={6}>
             <TextField
               id="gender"
               label="جنسیت"
@@ -172,7 +172,7 @@ export default function LeftContent() {
               }}
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={12} sm:size={6}>
             <TextField
               id="city"
               label="شهر"
@@ -200,7 +200,7 @@ export default function LeftContent() {
               }}
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={12} sm:size={6}>
             <TextField
               id="phonenumber"
               label="شماره موبایل"
@@ -228,7 +228,7 @@ export default function LeftContent() {
               }}
             />
           </Grid>
-          <Grid size={6}>
+          <Grid size={12} sm:size={6}>
             <TextField
               id="email"
               label="ایمیل"
