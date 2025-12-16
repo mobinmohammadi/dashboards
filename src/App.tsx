@@ -4,6 +4,8 @@ import Home from "./features/Home/Page/Home";
 import Patients from "./Page/Patients";
 import ListOfPatients from "./features/ListOfPatients/Page/ListOfPatients";
 import OnsPateintsEdit from "./features/ListOfPatients/Components/OnsPateintsEdit/OnsPateintsEdit";
+import Login from "./Page/Login";
+import ProfilePage from "./Page/ProfilePage";
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
             <Route index element={<Home />} />
             <Route path="patient" element={<Patients />} />
             <Route path="listofpatients" element={<ListOfPatients />} />
-            <Route path="onpateintsedit/:ID" element={<OnsPateintsEdit />}></Route>
+            <Route path="onpateintsedit/:ID" element={<OnsPateintsEdit />} />
+            <Route path="profile" element={<ProfilePage />} />
           </Route>
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>

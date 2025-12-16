@@ -19,6 +19,9 @@ function Layout() {
         case "/listofpatients":
         setTitle("لیست بیماران روز");
         break;
+        case "/profile":
+        setTitle("ویرایش اطلاعات");
+        break;
     }
   }, [location.pathname]);
 

@@ -5,7 +5,7 @@ interface Props {
 
 export default function Header({title} : Props) {
   return (
-    <div className=" h-14 pr-4 pl-4 border-b-gray-400 border-b  w-full">
+    <div className=" h-14 pr-4 pl-4 z-20 border-b-gray-400 border-b  w-full">
       <div className="flex w-full pb-3 items-center justify-between mt-4 text-gray-700">
         <span>{title}</span>
         <div className="flex items-center gap-4">

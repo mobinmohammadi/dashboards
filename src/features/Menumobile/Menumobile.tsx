@@ -26,7 +26,7 @@ export default function Menumobile() {
           </svg>
         </Link>
 
-        <Link to="/">
+        <Link to="/profile">
           <svg className="w-6 h-6">
             <use href="#user"></use>
           </svg>
