@@ -47,8 +47,8 @@ export default function Home() {
         ))}
 
       </div>
-      <div className="w-full flex flex-col gap-4 h-[316px] ">
-        <div className="sm:w-[648px] h-full border border-gray-300 rounded-2xl p-6">
+      <div className="w-full flex flex-col gap-4 h-86.5 ">
+        <div className="sm:w-162 h-full border border-gray-300 rounded-2xl p-6">
           <div className="flex flex-col gap-5 w-full">
 
             <div className="w-full pb-5 flex border-b-2 border-b-gray-300 items-center justify-between">
