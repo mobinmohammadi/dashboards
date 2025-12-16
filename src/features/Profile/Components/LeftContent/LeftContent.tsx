@@ -1,5 +1,4 @@
 import CssBaseline from "@mui/material/CssBaseline";
-import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -12,18 +11,7 @@ import { FormProfailSchema } from "../../Schema/FormProfailSchema";
 
 
 export default function LeftContent() {
-  // const TextField = styled(TextField)({
-  //   direction: "rtl",
-  //   "& label": {
-  //     right: 0,
-  //     left: "auto",
-  //     transformOrigin: "top right",
-  //   },
-  //   "& input": {
-  //     textAlign: "right",
-  //   },
 
-  // });
   const {
     register,
     handleSubmit,
@@ -32,7 +20,8 @@ export default function LeftContent() {
     resolver: yupResolver(FormProfailSchema)
   })
   const onSubmit: SubmitHandler<IInputFormProfail> = (data) => {
-
+    console.log(data);
+    
   }
 
   return (
