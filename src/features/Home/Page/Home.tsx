@@ -47,7 +47,7 @@ export default function Home() {
         ))}
 
       </div>
-      <div className="w-full flex flex-col gap-4 h-86.5 ">
+      <div className="w-full flex flex-col gap-4 h-100 ">
         <div className="sm:w-162 h-full border border-gray-300 rounded-2xl p-6">
           <div className="flex flex-col gap-5 w-full">
 
