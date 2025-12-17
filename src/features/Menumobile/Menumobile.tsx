@@ -1,36 +1,39 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 export default function Menumobile() {
+  const { pathname } = useLocation();
+
+  const menuItems = [
+    { to: "/", icon: "#menu-svg", title: "صفحه اصلی" },
+    { to: "/listofpatients", icon: "#patins", title: "لیست روزها" },
+    { to: "/timedays", icon: "#time", title: "زمان‌بندی" },
+    { to: "/profile", icon: "#user", title: "ویرایش اطلاعات" },
+  ];
+
   return (
-    <div className="fixed bottom-5 left-1/2 -translate-x-1/2 w-[92%] h-[88px] z-10 flex items-center bg-white rounded-2xl shadow-2xl">
+    <div className="fixed bottom-5 left-1/2 -translate-x-1/2 w-[92%] h-22 z-10 flex items-center bg-white rounded-2xl shadow-2xl">
       <div className="flex gap-5 justify-center items-center w-full h-full">
-        <Link to="/">
-          <svg className="w-6 h-6">
-            <use href="#menu-svg"></use>
-          </svg>
-        </Link>
+        {menuItems.map((menu) => {
+          const isActive = pathname === menu.to;
 
-        <Link
-          to="/listofpatients"
-          className="bg-primary-100 flex gap-1 items-center rounded-2xl p-2 text-white"
-        >
-          <svg className="w-6 h-6">
-            <use href="#patins"></use>
-          </svg>
-          <span>بیماران</span>
-        </Link>
+          return (
+            <Link
+              key={menu.to}
+              to={menu.to}
+              className={`flex gap-1 transition-all items-center p-2 rounded-md ${
+                isActive
+                  ? "bg-primary-100 text-white"
+                  : "text-gray-900"
+              }`}
+            >
+              <svg className="w-6 h-6">
+                <use href={menu.icon}></use>
+              </svg>
 
-        <Link to="/">
-          <svg className="w-6 h-6">
-            <use href="#time"></use>
-          </svg>
-        </Link>
-
-        <Link to="/profile">
-          <svg className="w-6 h-6">
-            <use href="#user"></use>
-          </svg>
-        </Link>
+              {isActive && <span>{menu.title}</span>}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

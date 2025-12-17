@@ -6,6 +6,7 @@ import ListOfPatients from "./features/ListOfPatients/Page/ListOfPatients";
 import OnsPateintsEdit from "./features/ListOfPatients/Components/OnsPateintsEdit/OnsPateintsEdit";
 import Login from "./Page/Login";
 import ProfilePage from "./Page/ProfilePage";
+import TimeDays from "./Page/TimeDays";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="listofpatients" element={<ListOfPatients />} />
             <Route path="onpateintsedit/:ID" element={<OnsPateintsEdit />} />
             <Route path="profile" element={<ProfilePage />} />
+            <Route path="timedays" element={<TimeDays />} />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>

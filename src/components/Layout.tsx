@@ -13,7 +13,7 @@ function Layout() {
       case "/":
         setTitle("داشبورد اصلی");
         break;
-      case "/patient":
+      case "/":
         setTitle("اطلاعات بیمار");
         break;
         case "/listofpatients":
